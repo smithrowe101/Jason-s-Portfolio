@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+span{
+    color: red;
+}
+h2{
+    color: white;
+}
+h3{
+    color: white;
+}
+p{
+    color: white;
+}
+h4{
+    color: white;
+}
+h5{
+    color: white;
+}
+.container{
+    width: auto;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-areas: "First First First First"
+                         "Second Second Third Fourth"
+                         "Second Second Third Fourth"
+                         "Fifth Sixth Sixth Fourth";
+                         gap: 20px;
+}
+img{
+    border: 2px solid blue;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.imgname{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.b{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.cb{
+    color: darkgray;
+}
+.container div:nth-child(1){
+    background-color: black;
+    grid-area: First;
+}
+.container div:nth-child(2){
+    background-color: black;
+    grid-area: Second;
+    border-radius: 10px;
+    width: 600px;
+}
+.container div:nth-child(3){
+    background-color:  rgb(85, 81, 81);
+    grid-area: Third;
+    border-radius: 10px;
+}
+.container div:nth-child(4){
+    background-color: black;
+    grid-area: Fourth;
+    border-radius: 10px;
+}
+.container div:nth-child(5){
+    background-color:  rgb(85, 81, 81);
+    grid-area: Fifth;
+    border-radius: 10px;
+    width: 500px;
+}
+.container div:nth-child(6){
+    background-color: black;
+    grid-area: Sixth;
+    border-radius: 10px;
+}

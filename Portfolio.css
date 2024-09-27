@@ -1,0 +1,712 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: white;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: 1px solid grey;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 140px;
+}
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+
+.navbar a:hover,
+.navbar a:focus,
+nav a.active4{
+    color: yellow;
+    border-bottom: 5px solid yellow;
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+    margin-right: 40px;
+
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    color: white;
+
+}
+
+span{
+    color: yellow;
+    font-size: 30px;
+}
+.portfolio{
+    width: 1500px;
+    height: 1200px;
+    background-color: transparent;
+    display: grid;
+    grid-template-areas: "First First First First"
+                         "Second Second Second Second"
+                         "Third Third Third Third"
+                         "Fourth Fourth Fourth Fourth"
+                         "Fifth Fifth Fifth Fifth"
+                         "Sixth Sixth Sixth Sixth";
+                         gap: 10px;
+    margin-left: 10px;
+    margin-top: 100px;
+    
+}
+
+.portfolio div:nth-child(1){
+    background-color: yellow;
+    grid-area: First;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 100px;
+    border: 5px solid green;
+    border-radius: 10px;
+
+
+}
+.portfolio div:nth-child(2){
+    background-color: green;
+    grid-area: Second;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid yellow;
+    border-radius: 10px;
+    margin-right: 100px;
+
+}
+.portfolio div:nth-child(3){
+    background-color: yellow;
+    grid-area: Third;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid green;
+    border-radius: 10px;
+    margin-left: 100px;
+
+}
+.portfolio div:nth-child(4){
+    background-color: green;
+    grid-area: Fourth;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid yellow;
+    border-radius: 10px;
+    margin-right: 100px;
+
+}
+.portfolio div:nth-child(5){
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-area: Fifth;
+    border: 5px solid green;
+    border-radius: 10px;
+    margin-left: 100px;
+
+}
+.portfolio div:nth-child(6){
+    background-color: green;
+    grid-area: Sixth;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid yellow;
+    border-radius: 10px;
+    margin-right: 100px
+}
+
+.portfolio p {
+    color: black;
+    font-size: 25px;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: white;    
+    }
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .checkbox i {
+        font-size: 60px;
+    }
+
+    ul {
+        position: absolute;
+        background-color: green;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 2.0rem;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 40px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 100px;
+        
+    }
+    /* .logo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: green;
+        animation: showRight 1s ease forwards;
+        animation-delay: .5s;
+    
+    } */
+
+    span{
+        color: yellow;
+        font-size: 50px;
+    }
+
+    .portfolio{
+        width: 600px;
+        height: 2000px;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "First First First First"
+                             "Second Second Second Second"
+                             "Third Third Third Third"
+                             "Fourth Fourth Fourth Fourth"
+                             "Fifth Fifth Fifth Fifth"
+                             "Sixth Sixth Sixth Sixth";
+                             gap: 10px;
+        
+        margin-top: 150px;
+        
+    }
+
+    .portfolio div:nth-child(1){
+        background-color: yellow;
+        grid-area: First;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        border: 5px solid green;
+        border-radius: 10px;
+    
+    
+    }
+    .portfolio div:nth-child(2){
+        background-color: green;
+        grid-area: Second;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(3){
+        background-color: yellow;
+        grid-area: Third;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(4){
+        background-color: green;
+        grid-area: Fourth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(5){
+        background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        grid-area: Fifth;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(6){
+        background-color: green;
+        grid-area: Sixth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    }
+    
+    .portfolio p {
+        color: black;
+        font-size: 25px;
+    }
+    
+    .portfolio div p a {
+        display: none;
+    }    
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: white;    
+    }
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .checkbox i {
+        font-size: 60px;
+    }
+
+    ul {
+        position: absolute;
+        background-color: green;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 2.0rem;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 40px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 100px;
+        
+    }
+    /* .logo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: green;
+        animation: showRight 1s ease forwards;
+        animation-delay: .5s;
+    
+    } */
+
+    span{
+        color: yellow;
+        font-size: 50px;
+    }
+
+    .portfolio{
+        width: 600px;
+        height: 2000px;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "First First First First"
+                             "Second Second Second Second"
+                             "Third Third Third Third"
+                             "Fourth Fourth Fourth Fourth"
+                             "Fifth Fifth Fifth Fifth"
+                             "Sixth Sixth Sixth Sixth";
+                             gap: 10px;
+        
+        margin-top: 150px;
+        
+    }
+
+    .portfolio div:nth-child(1){
+        background-color: yellow;
+        grid-area: First;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        border: 5px solid green;
+        border-radius: 10px;
+    
+    
+    }
+    .portfolio div:nth-child(2){
+        background-color: green;
+        grid-area: Second;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(3){
+        background-color: yellow;
+        grid-area: Third;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(4){
+        background-color: green;
+        grid-area: Fourth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(5){
+        background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        grid-area: Fifth;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(6){
+        background-color: green;
+        grid-area: Sixth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    }
+    
+    .portfolio p {
+        color: black;
+        font-size: 25px;
+    }
+    
+    .portfolio div p a {
+        display: none;
+    }        
+}
+
+@media (min-width: 769px) and (max-width: 1220px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: white;    
+    }
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .checkbox i {
+        font-size: 60px;
+    }
+
+    ul {
+        position: absolute;
+        background-color: green;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 2.0rem;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 40px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 100px;
+        
+    }
+    /* .logo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: green;
+        animation: showRight 1s ease forwards;
+        animation-delay: .5s;
+    
+    } */
+
+    span{
+        color: yellow;
+        font-size: 50px;
+    }
+
+    .portfolio{
+        width: 600px;
+        height: 2000px;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "First First First First"
+                             "Second Second Second Second"
+                             "Third Third Third Third"
+                             "Fourth Fourth Fourth Fourth"
+                             "Fifth Fifth Fifth Fifth"
+                             "Sixth Sixth Sixth Sixth";
+                             gap: 10px;
+        
+        margin-top: 150px;
+        
+    }
+
+    .portfolio div:nth-child(1){
+        background-color: yellow;
+        grid-area: First;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        border: 5px solid green;
+        border-radius: 10px;
+    
+    
+    }
+    .portfolio div:nth-child(2){
+        background-color: green;
+        grid-area: Second;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(3){
+        background-color: yellow;
+        grid-area: Third;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(4){
+        background-color: green;
+        grid-area: Fourth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(5){
+        background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        grid-area: Fifth;
+        border: 5px solid green;
+        border-radius: 10px;
+        
+    
+    }
+    .portfolio div:nth-child(6){
+        background-color: green;
+        grid-area: Sixth;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 5px solid yellow;
+        border-radius: 10px;
+        
+    }
+    
+    .portfolio p {
+        color: black;
+        font-size: 25px;
+    }
+    
+    .portfolio div p a {
+        display: none;
+    }    
+}
+
